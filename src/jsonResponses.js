@@ -25,7 +25,7 @@ const addUser = (request, response, body) => {
     message: 'Idea and type are both required.',
   };
 
-  if (!body.title || !body.type || !body.description) { //adding body.description doesn't work so I think the text field is working
+  if (!body.title || !body.type || !body.description) {
     responseJSON.id = 'missingParams';
     return respondJSON(request, response, 400, responseJSON);
   }
@@ -37,7 +37,7 @@ const addUser = (request, response, body) => {
     responseCode = 201;
     users[body.title] = {};
   }
-
+  // Object.values(obj).forEach(user => {  })
   users[body.title].title = body.title;
   users[body.title].type = body.type;
   users[body.title].description = body.description;

@@ -40,20 +40,19 @@ const handlePost = (request, response, parsedUrl) => {
 };
 
 const handleGet = (request, response, parsedUrl) => {
-  if (parsedUrl.pathname === '/style.css') 
-  {
+  if (parsedUrl.pathname === '/style.css') {
     htmlHandler.getCSS(request, response);
-  } 
-  else if (parsedUrl.pathname === '/getUsers') 
-  {
+  } else if (parsedUrl.pathname === '/style2.css') {
+    htmlHandler.getCSS2(request, response);
+  } else if (parsedUrl.pathname === '/getUsers') {
     jsonHandler.getUsers(request, response);
-  }
-  else if (parsedUrl.pathname === '/client.js') 
-  {
+  } else if (parsedUrl.pathname === '/page2-bundle.js') {
     htmlHandler.getJS(request, response);
-  }
-  else 
-  {
+  } else if (parsedUrl.pathname === '/page1-bundle.js') {
+    htmlHandler.getJS2(request, response);
+  } else if (parsedUrl.pathname === '/app.html') {
+    htmlHandler.getIndex2(request, response);
+  } else {
     htmlHandler.getIndex(request, response);
   }
 };

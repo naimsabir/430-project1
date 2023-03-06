@@ -1,0 +1,22 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #DCDCDD;
+}
+
+#top {
+  text-align: center;
+  margin: 300 auto;
+}
+
+#top h1 {
+  font-size: 2em;
+}
+
+#content {
+  margin-top: 50px;
+  font-size: 2em;
+  text-align: center;
+}
